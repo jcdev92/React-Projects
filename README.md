@@ -1,4 +1,4 @@
-#REACT PROJECTS
+# REACT PROJECTS
 
 It's a compilation of react projects I made, each with its own branch where you can check each one.
 
