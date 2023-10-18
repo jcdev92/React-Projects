@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "acer gaming c50",
+      "description": "laptop gaming",
+      "price": 1000,
+      "inStock": true
+    },
+    {
+      "id": 3,
+      "name": "headphones blast environment",
+      "description": "gaming headphones",
+      "price": 100,
+      "inStock": true
+    },
+    {
+      "name": "logitech X50M",
+      "description": "mouse gaming sensitive",
+      "price": "80",
+      "inStock": true,
+      "id": 4
+    },
+    {
+      "name": "logitech X50M",
+      "description": "pepsi cola",
+      "price": "80",
+      "inStock": true,
+      "id": 5
+    }
+  ]
+}
