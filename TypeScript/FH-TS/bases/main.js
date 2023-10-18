@@ -28,11 +28,9 @@
         constructor(name, realName) {
             this.name = name;
             this.realName = realName;
-            console.log('Constructor Avenger llamado');
-            console.log(`accediendo al metodo protegido que devuelve: ${this.getFullName()} desde la clase avenger`);
         }
         getFullName() {
-            return `${this.name} ${this.realName}`;
+            return `${this.name} - ${this.realName || 'No Name'}`;
         }
     }
     const doctorStrange = new Avenger('Doctor Strange', 'Dr. Stephen Strange');
@@ -41,11 +39,26 @@
         constructor(name, realName, isMutand) {
             super(name, realName);
             this.isMutand = isMutand;
-            console.log('Constructor Xmen llamado');
-            console.log(`accediendo al metodo protegido que devuelve: ${this.getFullName()} desde la clase extendida de Avenger: Xmen`);
+        }
+        get getRealName() {
+            if (!this.realName) {
+                return 'No tiene nombre real';
+            }
+            return `Heroe (${this.name}) real name is: ${this.realName}`;
+        }
+        set fullName(name) {
+            if (name.length < 3) {
+                throw new Error('El nombre debe tener al menos 3 caracteres');
+            }
+            if (!this.realName) {
+                this.realName = name;
+            }
+            this.name = name;
         }
     }
     const wolverine = new Xmen('Wolverine', 'Logan', true);
-    console.log(wolverine);
+    wolverine.fullName = 'Fernando';
+    const deadpool = new Xmen('Deadpool');
+    deadpool.fullName = 'Wade Wilson';
 })();
 //# sourceMappingURL=main.js.map
