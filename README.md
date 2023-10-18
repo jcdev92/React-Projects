@@ -4,6 +4,7 @@ It's a compilation of react projects I made, each project has its own branch whe
 
 - ### *List of branches by each react project:*
     - "main" (this one)
+    - "FH-React-Course"
     - "animatedBackgounds"
     - "lampsApp"
     - "newsApp"
@@ -12,5 +13,6 @@ It's a compilation of react projects I made, each project has its own branch whe
     - "reactRoutesProtected"
     - "testingLibraries"
     - "typescript"
+    - "usersCards"
     - "weatherApp"
     
