@@ -1,0 +1,21 @@
+.horizontal-list {
+    list-style: none;
+    /* Quita los estilos de viñeta de la lista */
+    padding: 0;
+    /* Quita el padding por defecto de la lista */
+    display: flex;
+    /* Activa el modo flexbox en el contenedor */
+    flex-direction: row;
+    /* Establece la dirección de los elementos */
+    justify-content: space-around;
+    /* Establece la alineación horizontal */
+    align-items: center;
+    /* Establece la alineación vertical */
+}
+
+
+/* isActive class */
+
+.active {
+    color: #535bf2;
+}
