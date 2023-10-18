@@ -6,7 +6,7 @@ It's a compilation of react projects I made, each with its own branch where you 
 
 - *List of branches by each react project:*
     - "main" (this one)
-    - "aniamtedBackgounds"
+    - "animatedBackgounds"
     - "lampsApp"
     - "newsApp"
     - "quotesApp"
