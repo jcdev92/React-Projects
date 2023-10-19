@@ -1,5 +1,31 @@
 "use strict";
 (() => {
+    class Mutant {
+        constructor(name, realName) {
+            this.name = name;
+            this.realName = realName;
+        }
+    }
+    class Xmen extends Mutant {
+        salvarMundo() {
+            return 'Mundo salvado';
+        }
+    }
+    class Villain extends Mutant {
+        conquistarAlMundo() {
+            return 'Mundo conquistar';
+        }
+    }
+    const wolverine = new Xmen('Wolverine', 'Logan');
+    const magneto = new Villain('Magneto', 'Magnus');
+    console.log(wolverine.salvarMundo());
+    console.log(magneto.conquistarAlMundo());
+    const printName = (character) => {
+        console.log(character.realName);
+    };
+    printName(wolverine);
+})();
+(() => {
     class Avenger {
         static getAvgAge() {
             return this.name;
