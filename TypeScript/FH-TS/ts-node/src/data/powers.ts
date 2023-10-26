@@ -11,6 +11,10 @@ const powers: Power[] = [
     {
         id: 2,
         desc: 'Drugs'
+    },
+    {
+        id: 3,
+        desc: 'Fly System'
     }
 ]
 
