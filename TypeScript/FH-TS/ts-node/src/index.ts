@@ -1,5 +1,3 @@
-import { getPokemon } from "./generics/get-pokemon";
+import { Pokeclass } from "./decorators/poke-class";
 
-getPokemon(4)
-    .then(pokemon => console.log(pokemon.sprites.front_default))
-    .catch(err => console.log(err))
+const charmander = new Pokeclass('Charmander');
