@@ -9,11 +9,11 @@ function printToConsole(constructor: Function): void {
 
 //* factory decorators
 // factory decorators son funciones que devuelven otras funciones
-const printToConsoleConditional = (print: boolean = false):Function => {
+const printToConsoleConditional = (print: boolean = false): Function => {
     if (print) {
         return printToConsole;
     } else {
-        return ():void => console.log("greetings");
+        return (): void => console.log("greetings");
     }
 }
 
@@ -30,8 +30,27 @@ function CheckValidPokemonId() {
     }
 }
 
+function readonly(isWritable: boolean = true): Function {
+    return function (target: any, propertyKey: string) {
+        const descriptor: PropertyDescriptor = {
+            get() {
+                return "Luis";
+            },
+            set(this, val) {
+                Object.defineProperty(this, propertyKey, {
+                    value: val,
+                    writable: !isWritable,
+                    enumerable: false
+                });
+            }
+        }
+        return descriptor;
+    }
 
-const blockPrototype = function(constructor: Function) {
+}
+
+
+const blockPrototype = function (constructor: Function) {
     Object.seal(constructor);
     Object.seal(constructor.prototype);
 }
@@ -40,10 +59,11 @@ const blockPrototype = function(constructor: Function) {
 @blockPrototype
 @printToConsoleConditional(true)
 export class Pokeclass {
-    public pubApi: string = `https://pokeapi.co`
+    @readonly(false)
+    private pubApi: string = `https://pokeapi.co`
     constructor(
         public name: string,
-    ) {}
+    ) { }
 
     @CheckValidPokemonId()
     savePokemonToDB(id: number) {
