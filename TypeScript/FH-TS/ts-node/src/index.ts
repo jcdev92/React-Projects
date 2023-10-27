@@ -10,6 +10,6 @@ const charmander = new Pokeclass('Charmander');
 
 // charmander.savePokemonToDB(125)
 
-charmander.pubApi = 'https://pokeapi.co/api/v2/pokemon/4' //! index.ts:9  Uncaught TypeError: Cannot assign to read only property 'pubApi' of object '#<Pokeclass>' 
+// charmander.pubApi = 'https://pokeapi.co/api/v2/pokemon/4' //! index.ts:9  Uncaught TypeError: Cannot assign to read only property 'pubApi' of object '#<Pokeclass>' 
 //? el decorador esta funcionando y bloquea la modificacion de la propiedad privada en tiempo de ejecucion, ya no solamente es typescript adviritendo en tiempo de transpilacion de ts a js.
 console.log(charmander);
