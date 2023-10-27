@@ -1,0 +1,1 @@
+export const printObject = <T>( argument: T) => argument;
