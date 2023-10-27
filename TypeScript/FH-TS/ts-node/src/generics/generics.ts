@@ -1,1 +1,1 @@
-export const printObject = <T>( argument: T) => argument;
+export const genericFunctionArrow = <T>( argument: T) => argument;
