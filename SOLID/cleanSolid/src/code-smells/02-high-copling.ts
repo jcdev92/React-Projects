@@ -6,7 +6,8 @@
 
     class Person {
         constructor(
-            public name: string,
+            public firstName: string,
+            public LastName: string,
             public gender: Gender,
             public birthdate: Date,
         ){}
@@ -17,11 +18,12 @@
             public email: string,
             public role: string,
             private lastAccess: Date,
-            name: string,
+            firstName: string,
+            lastName: string,
             gender: Gender,
             birthdate: Date,
         ){
-            super(name, gender, birthdate);
+            super(firstName, lastName, gender, birthdate);
             this.lastAccess = new Date();
         }
 
@@ -37,7 +39,8 @@ class UserSettings extends User {
         public lastFolderOpen: string,
         email     : string,
         role      : string,
-        name      : string,
+        firstName : string,
+        lastName  : string,
         gender    : Gender,
         birthdate : Date,
     ){
@@ -45,7 +48,8 @@ class UserSettings extends User {
             email,
             role,
             new Date(),
-            name,
+            firstName,
+            lastName,
             gender,
             birthdate
         )
@@ -60,6 +64,7 @@ class UserSettings extends User {
         'fernando@google.com',
         'F',
         'Fernando',
+        'Herrera',
         'M',
         new Date('1985-10-21')
     );
