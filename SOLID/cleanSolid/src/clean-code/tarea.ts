@@ -7,7 +7,7 @@
     interface HtmlElementProps {
         id: string;
         type: HtmlType;
-    }
+    };
 
     class HtmlElement {
         public id: string;
@@ -15,14 +15,14 @@
 
         constructor({ id }: HtmlElementProps) {
             this.id = id;
-        }
-    }
+        };
+    };
 
     interface InputAttributesProps {
         value: string;
         placeholder: string;
 
-    }
+    };
 
     class InputAttributes {
         public value: string;
@@ -30,14 +30,14 @@
         constructor({ value, placeholder, }: InputAttributesProps) {
             this.value = value;
             this.placeholder = placeholder;
-        }
-    }
+        };
+    };
 
 
 
     class InputEvents {
         constructor() {
-        }
+        };
 
         setFocus() { };
         getValue() { };
@@ -62,11 +62,11 @@
             this.html = new HtmlElement({ id, type: 'input' });
             this.attributes = new InputAttributes({ value, placeholder });
             this.events = new InputEvents();
-        }
+        };
     };
 
     const nameField = new InputElement({ value: 'Fernando', placeholder: 'Enter first name', id: 'txtName' });
 
     console.log({ nameField });
 
-})()
+})();
