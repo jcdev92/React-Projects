@@ -23,7 +23,6 @@ class Tucan implements Bird, FlyingBird {
     public fly() { };
     public walk() { };
     public eat() { };
-
 };
 
 class Humminbird implements Bird, FlyingBird {
