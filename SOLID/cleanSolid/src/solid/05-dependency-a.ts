@@ -1,3 +1,5 @@
+//? PRINCIO DE INVERSION DE DEPENCIAS.
+
 import { PostService } from './05-dependency-b';
 import { LocalDataBaseService, JsonDataBaseService, WebApiPostService } from './05-dependency-c';
 
