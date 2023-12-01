@@ -3,7 +3,7 @@
 It's a compilation of react projects I made, each project has its own branch where you can check it.
 
 - ### *List of branches by each react project:*
-    - "main" (this one)
+    - "main"
     - "FH-React-Course"
     - "animatedBackgounds"
     - "lampsApp"
@@ -15,4 +15,7 @@ It's a compilation of react projects I made, each project has its own branch whe
     - "typescript"
     - "usersCards"
     - "weatherApp"
+ 
+  - ### Others
+      - "SOLID" 
     
